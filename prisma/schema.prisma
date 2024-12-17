@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model getnewexcel {
+  id     Int    @id @default(autoincrement())
+  name   String
+  school String
+  submit String
+  infor  String @db.VarChar(11111)
+}
+
+model getschool23 {
+  id                Int    @id @default(autoincrement())
+  ids               String
+  school            String
+  characteristics   String
+  Faculties         String
+  specialized       String
+  researchDirection String
+  learningStyle     String
+  enrollmentNumber  String
+  lessonOne         String
+  lessonTwo         String
+  english           String
+  politics          String
+  place             String
+  code              String
+  teacher           String
+  category          String
+  firstSubject      String
+  remarks           String
+}
+
+model getscore {
+  id                    Int    @id @default(autoincrement())
+  year                  String
+  school                String
+  masterType            String
+  code                  String
+  name                  String
+  score                 String
+  politics              String
+  english               String
+  lessonOne             String
+  lessonTwo             String
+  remarks               String
+  province              String
+  schoolType            String
+  schoolWebsite         String
+  schoolResearchWebsite String
+  schoolPhone           String
+  schoolEmail           String
+  schoolAddress         String
+  belong                String
+  master                String
+  doctor                String
+  nationalKeySubject    String
+  keyLaboratory         String
+}
